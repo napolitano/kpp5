@@ -25,5 +25,6 @@ int main () {
     }
 
     printf("Ihre Engabe war %d Zeichen lang", laenge);
+
     return 0;
 }
