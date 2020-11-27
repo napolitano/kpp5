@@ -2,6 +2,14 @@
 
 #define MAX_LAENGE 100
 
+/**
+ * @brief Erstellen Sie ein Programm, das 
+ * den Benutzer einen Text eingeben lässt 
+ * und anschließend ausgibt, wie viele 
+ * Zeichen dieser lang ist.
+ * 
+ * @return int 
+ */
 int main () {
 
     int laenge;

@@ -2,6 +2,15 @@
 
 #define MAX_LAENGE 100
 
+/**
+ * @brief Erstellen Sie ein Programm, 
+ * das den Benutzer einen Text eingeben
+ * lässt und anschließend ausgibt, ob 
+ * es sich dabei um ein Palindrom
+ * (z.B. „rentner“ oder „lagerregal“) handelt.
+ * 
+ * @return int 
+ */
 int main () {
 
     int laenge, pruefungErfolgreich = 1;
@@ -29,6 +38,6 @@ int main () {
     } else {
        printf("Ihre Engabe war kein Palindrom");
     }
-    
+
     return 0;
 }
