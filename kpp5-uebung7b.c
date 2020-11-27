@@ -4,20 +4,16 @@
 
 int main () {
 
-    int zaehler = 0;
     char eingabePuffer[MAX_LAENGE];
-    char ausgabePuffer[MAX_LAENGE];
 
     printf("Bitte geben Sie einen Text (max. 100 Zeichen, Eingabe mit <enter> abschliessen) ein:\n");
     fgets(eingabePuffer, MAX_LAENGE, stdin);
 
     for(int i=0; !!eingabePuffer[i]; i++) {
         if(eingabePuffer[i] != 'e') {
-            ausgabePuffer[zaehler++] = eingabePuffer[i];
+            printf("%c", eingabePuffer[i]);
         }
     }
-
-    printf("%s", ausgabePuffer);
 
     return 0;
 }
