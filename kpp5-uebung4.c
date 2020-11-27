@@ -5,19 +5,17 @@
 int main () {
 
     int laenge;
-    char textPuffer[MAX_LAENGE];
+    char eingabePuffer[MAX_LAENGE];
 
     printf("Bitte geben Sie einen Text (max. 100 Zeichen, Eingabe mit <enter> abschliessen) ein:\n");
-    fgets(textPuffer, MAX_LAENGE, stdin);
+    fgets(eingabePuffer, MAX_LAENGE, stdin);
 
-    // Remove \r and \n - But shouldn't happen
-    for(laenge=0; !!textPuffer[laenge]; laenge++) {
-        if(!!laenge && (textPuffer[laenge-1] == '\n' || textPuffer[laenge-1] == '\r')) {
-            textPuffer[laenge-1] = 0;
-            break;
-        }
+    for(laenge=0; !!eingabePuffer[laenge]; laenge++);
+    if(!!laenge && eingabePuffer[laenge-1] == '\n') {
+        eingabePuffer[laenge-1] = 0;
+        laenge--;
     }
 
-    printf("Ihre Engabe war %d Zeichen lang", laenge-1);
+    printf("Ihre Engabe war %d Zeichen lang", laenge);
     return 0;
 }
